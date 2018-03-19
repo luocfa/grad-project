@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+	<!-- 
+		此配置文件，用来配置一些常量，此类常量不能再java类里写死，可以在此配置,
+		使用时参照Constant.java中的写法 
+	-->
+	
+	<!-- 给cookie使用的作用域,根据环境修改  -->
+	<bean id="domainConfiguration" class="com.nuist.common.define.Constant">
+		<property name="DOMAINNAME">
+			<value>localhost</value>
+		</property>
+		<property name="TIMERTASK_MINUTE">
+			<value>5</value>
+		</property>
+		<property name="TIMERTASK_SECONDS">
+			<value>0</value>
+		</property>
+		<property name="TIMERTASK_PERIOD">
+			<value>3600000</value>
+		</property>
+	</bean>
+</beans>

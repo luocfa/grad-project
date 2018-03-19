@@ -1,0 +1,73 @@
+@charset "utf-8";
+/**css-reset***/
+*{margin:0; padding:0;box-sizing:content-box;}
+body,button,select{ font:13px/1.5 "Microsoft YaHei", Tahoma, Geneva, sans-serif;}
+input,textarea { font:13px "Microsoft YaHei", Tahoma, Geneva, sans-serif; outline:none; resize:none; border:none; vertical-align:middle;}
+ol,ul,li { list-style:none;color:#fff;}
+div,p,ul,li,input,label,button,img,span,iframe,textarea,select,option{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.clear { width:100%; height:0; line-height:0; font-size:0; overflow:hidden;}
+img { border:0;}
+a { color:#fff; text-decoration:none;}
+a:hover { color:#FC0;}
+
+.top0 {top:0;}
+.top25 {top:25px;}
+.top45 {top:45px;}
+.top70 {top:70px;}
+.top90 {top:90px;}
+.top115 {top:115px;}
+.top135 {top:135px;}
+.top160 {top:160px;}
+.top180 {top:180px;}
+.top225 {top:225px;}
+.whiteColor {black-color:#fff}
+.wid300 {width:300px;}
+
+.hide {display:none;}
+
+body {background-color:#064575;width:715px;height:520px;margin:5px;color:#095D9C;}
+.content {background-color:#C6DBE6;width:715px;height:520px;}
+.content .welcomes {width:715px;height:520px;background:url(../../images/welcome.jpg) no-repeat 0 0;}
+.content .title {width:700px;height:47px;position:absolute;line-height:50px;padding-left:15px;border-bottom:3px solid #064575;float:left;}
+.content .title .figure {width:48px;height:27px;background:url(../../images/figure.png) no-repeat 0 0;position:absolute;top:15px;}
+.content .title .position {width:650px;height:47px;font-size:16px;position:relative;left:55px;}
+.content .editor {width:715px;height:447px;position:absolute;top:55px;border-bottom:3px solid #064575;display:none;overflow-y:auto;padding-top:20px;}
+.content .console {width:715px;height:170px;position:absolute;top:355px;}
+
+
+.editor .passwdbody {position:relative;width:300px;height:257px;margin:10px 0 10px 0;left:207px;}
+.editor .hourinfobody {position:relative;width:680px;height:447px;margin:-10px 0 10px 18px;left:0;}
+.editor .aqiinfobody {}
+.editor .imgmanager {position:relative;width:680px;height:427px;margin:10px 0 10px 15px;left:0;}
+
+.console .passtips {width:450px;height:30px;margin-left:180px;position:absolute;top:20px;}
+.console .passtips p {height:30px; line-height:30px;}
+
+
+.passwdbody .eachTip {position:absolute;width:300px; height:30px;float:left;}		
+.passwdbody .eachTip label {position:absolute;width:75px;cursor:pointer;margin:0 10px 0 20px;height:30px;line-height:30px;text-align:center;font-size:14px;color:#055C9B;background-color:#fff;}
+.passwdbody .eachTip em {position:absolute;left:105px;width:5px;height:30px;line-height:30px;font-style:normal;}
+.passwdbody .eachTip input {position:absolute;left:111px;margin-left:10px;padding-left:5px;height:30px;line-height:30px;width:140px;}
+.passwdbody .eachTip img {position:absolute;width:65px;height:30px;background-color:#fff;left:202px;}
+.passwdbody .submitbtn {position:absolute;width:200px;height:40px;top:250px;left:50px;}
+.passwdbody .submitbtn button {width:200px;height:40px;line-height:40px;background-color:#3879D9;color:#fff;font-size:20px;border:0;cursor:pointer;}
+.passwdbody .submitbtn .logining {background-color:#A9A9A9;}
+
+.imgmanager .eachTip {position:absolute;width:650px; height:30px;float:left;}
+.imgmanager .closebtn {width:23px;height:23px;position:fixed;right:38px;top:67px;background:url(../../images/error_close.gif) no-repeat 0 0;cursor:pointer;}
+.imgmanager .eachTip label {position:absolute;width:75px;cursor:pointer;margin:0 10px 0 20px;height:30px;line-height:30px;text-align:center;font-size:14px;color:#055C9B;background-color:#fff;}
+.imgmanager .eachTip em {position:absolute;left:105px;width:5px;height:30px;line-height:30px;font-style:normal;}
+.imgmanager .eachTip input,select {position:absolute;left:111px;margin-left:10px;padding-left:5px;height:30px;line-height:30px;width:500px;}
+.imgmanager .eachTip option {height:30px;line-height:30px;}
+.imgmanager .eachTip .file {filter:alpha(opacity=0);opacity:0;cursor:pointer;}
+.imgmanager .eachTip textarea {position:absolute;left:111px;margin-left:10px;padding:5px;height:240px;line-height:15px;width:495px;}
+.imgmanager .eachTip img {position:absolute;width:65px;height:30px;background-color:#fff;left:561px;}
+.imgmanager .submitbtn {position:absolute;width:200px;height:40px;top:385px;left:250px;}
+.imgmanager .submitbtn button {width:200px;height:40px;line-height:40px;background-color:#3879D9;color:#fff;font-size:20px;border:0;cursor:pointer;}
+.imgmanager .submitbtn .logining {background-color:#A9A9A9;}
+
+.hourinfobody .table th,td {text-align:center;width:18%;}
+.hourinfobody .table td div{cursor:pointer;}
+.hourinfobody .table td input{width:98%;margin:0;padding:0;height:24px;}
+.hourinfobody .pagination {margin:0;float:right;}
+.hourinfobody .tips p {width:50%;height:32px;line-height:32px;padding-left:15px;}

@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+.wrapper { width:980px; padding:0 18px; margin:0 auto; height:842px; background:#c9c9cb url(../../images/bg.png) no-repeat 50% 0;}
+.wrapper .inner { width:940px; margin:0 auto;}
+#content { position:relative; width:940px;height:600px;margin:0 20px 0 20px;background:url(../../images/contentbg.png) repeat-x 0 0;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius:10px;}
+
+/* 左侧天气栏 */
+.weather {width:308px;height:355px; color:#fff;position:absolute; margin:15px 0 10px 10px; }
+.splitv {width:4px;height:600px;margin-left:4px;margin-top:2.5px;float:right;background:url(../../images/split_v.png) no-repeat 0 0;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+.cityinfo { width:280px;height:50px;margin:0 0 0 10px;}
+.cityinfo span {width:150px;height:50px;float:left;}
+.cityinfo .othercity {width:100px; height:30px; float:right; padding:10px;}
+.cityinfo .uptime{width:70px;height:30px;float:right;overflow:hidden;line-height:30px;text-align:center;}
+.cityinfo .othercity img {float:right;cursor:pointer;-webkit-transition: all .5s ease-in-out .1s; -moz-transition: all .5s ease-in-out .1s;-o-transition: all .5s ease-in-out .1s;}
+.imgrorate {-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg); -o-transform: rotate(360deg);}
+.todayinfo { width:300px;height:100px; }
+.currweatherico {width:80px;height:80px;float:left;margin:10px 0 10px 20px;}
+.currdetail {width:190px;height:100px;float:right;margin:0 0 0 10px;}
+.currdetail span {text-align:center;}
+.currdetail span h1 {height:40px;line-height:40px;}
+.currdetail span h1 em{height:20px;line-height:20px;font-size:10px;font-weight:normal;}
+.currdetail span p {height:30px;line-height:30px;}
+.zhishu {width:300px;height:184px;margin-top:20px;background-color:#0B6AA7;}
+.zhishu .title {width:300px;margin-bottom:2px;font-size:16px;height:30px;}
+.zhishu .title p {width:80px;height:30px;margin-left:10px;margin-top:-10px;line-height:30px;color:#095D9C;background-color:#C6DBE6;position:absolute;text-align:center;}
+.weather hr{margin:5px 0 5px 0;	}
+.zhishu ul li {width:300px;}
+.zhishu .tabhover {color:#fff;background-color:#003161;}
+.zhishu .zsname{width:300px;height:25px;border-top:1px solid #C8DDE8;}
+.zhishu .zsname .array {cursor:pointer;line-height:25px;height:25px;background:url(../../images/selected_jt.png) no-repeat 6px 11px/15px 38px;}
+.zhishu .zsname .arrayup {background:url(../../images/selected_jt.png) no-repeat 6px -23px/15px 38px;}
+.zhishu .zsname .array p {margin-left:30px;}
+.zhishu .zsname .array p span {float:right;font-size:13px;margin-right:20px;color:#FC0;}
+.zhishu .zsdesc{width:300px;height:66px;position:relative;margin:2px 0 2px 0;}
+.zhishu .zsdesc .backgr {width:300px;height:66px;background-color:#095E9C;position:absolute; }
+.zhishu .zsdesc p {line-height:20px;position:absolute;padding:3px 5px 3px 5px;}
+
+.news {width:300px;height:195px;margin:5px 0 5px 10px;position:absolute;top:390px;background-color:#1176AE;}
+.news .newstitle {width:300px;height:30px;position:absolute;z-index:100;}
+.news .newstitle p{width:80px;margin-left:10px;margin-top:-10px	;line-height:30px;text-align:center;float:left;font-size:16px;color:#095D9C;background-color:#C6DBE6;}
+.news .newstitle span {line-height:30px;float:right;margin-right:10px;}
+.news .newslist {width:290px;height:160px;margin:5px 0 0 10px;}
+.news .newslist ul li {width:300px;height:25px;line-height:25px;font-size:13px;}
+
+.rightContent{width:605px;height:360px;margin:25px 10px 10px 5px;position:relative;float:right;}
+.charttab {width:605px;height:360px;}
+.charttab .charttitle {width:600px;height:25px;line-height:25px;margin-left:5px;padding-top:3px;}
+.charttab .charttitle li {cursor:pointer;float:left;height:25px;text-align:center;margin-right:5px;padding:0 5px;}
+.charttab .charttitle .tabselected {color:#095D9C;background-color:#C6DBE6;}
+.charttab .charttitle .tabhover {color:#fff;background-color:#003161;}
+.charttab .chartbody {width:605px;height:331px;position:absolute;}
+.charttab .chartbody .chart{width:525px;height:282px;position:absolute;left:40px;top:20px;background-color:#1376AF;}
+.charttab .chartbody .chart svg {width:525px;height:282px;}
+.charttab .chartbody .chart svg circle {cursor:pointer;}
+.charttab .chartbody .xCoorUnit {width:525px;height:25px;position:absolute;left:40px;top:302px;}
+.charttab .chartbody .xCoorUnit span {width:15px; height:25px; line-height:25px; position:relative;float:left;font-size:10px;}
+.charttab .chartbody .yCoorUnit {width:40px;height:282px;position:absolute;top:20px;}
+.charttab .chartbody .yCoorUnit span {width:40px;height:25px;text-align:center; line-height:25px;position:absolute;font-size:10px;}
+.charttab .chartbody .right {right:0;}
+.charttab .chartbody .aqidetail {width:589px;height:258px;position:absolute;margin:10px 0 0 0;background-color:#1376AF;padding:55px 8px 0 8px;}
+.charttab .chartbody .aqidetail .aqidesc {width:110px;height:40px;margin-bottom:10px;background:url(../../images/aqidetail.png) no-repeat -8px 0 ;float:left;position:relative;overflow:hidden;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+.charttab .chartbody .aqidetail .aqidesc p {height:35px;line-height:35px;width:110px;text-align:center;position:relative;top:5px;}
+.charttab .chartbody .aqidetail .title {width:559px;height:30px;line-height:30px;float:left;padding:0 15px;position:relative;}
+.charttab .chartbody .aqidetail .title span {position:relative;}
+.charttab .chartbody .aqidetail .eachbody {width:84px;height:74px;margin:17px 7px;float:left;cursor:pointer;background-color:#0D69A4;padding-top:20px;-moz-border-radius: 20px;-webkit-border-radius: 20px;border-radius:20px;}
+.charttab .chartbody .aqidetail .eachbody p {width:84px;height:30px;line-height:30px;text-align:center;font-size:16px;}
+
+.forecast {width:605px;height:195px;position:relative;float:right;margin:0 10px 0 0;background-color:#1176AE;}
+.forecast .fctitle {width:300px;height:30px;}
+.forecast .fctitle p{width:80px;margin-left:10px;margin-top:-10px;line-height:30px;text-align:center;float:left;font-size:16px;color:#095D9C;background-color:#C6DBE6;}
+.forecast .fcbody {width:605px;height:155px;}
+.forecast .fcbody .eachday {width:84px;height:140px;float:left;margin:0 8px;background-color:#0D69A4;padding-top:15px;}
+.forecast .fcbody .eachday .week {width:84px;height:30px;}
+.forecast .fcbody .eachday .week p {height:30px; line-height:30px;text-align:center;overflow-y:hidden;}
+
+.downarrow {width:300px;height:10px;cursor:pointer;margin:5px 0 10px 0;background:url(../../images/arrow_w.png) no-repeat 0 -10px/300px 20px;}
+.uparrow {width:300px;height:10px;cursor:pointer;margin:5px 0 10px 0;background:url(../../images/arrow_w.png) no-repeat 0 0/300px 20px;}
+/* 天气图标 */
+.wead1{background:url(../../images/weatherico/d1.png) no-repeat center/cover;}
+.wead2{background:url(../../images/weatherico/d2.png) no-repeat center/cover;}
+.wean1{background:url(../../images/weatherico/n1.png) no-repeat center/cover;}
+.wean2{background:url(../../images/weatherico/n2.png) no-repeat center/cover;}
+.wea3{background:url(../../images/weatherico/3.png) no-repeat center/cover;}
+.wea4{background:url(../../images/weatherico/4.png) no-repeat center/cover;}
+.wea5{background:url(../../images/weatherico/5.png) no-repeat center/cover;}
+.wea6{background:url(../../images/weatherico/6.png) no-repeat center/cover;}
+.wea7{background:url(../../images/weatherico/7.png) no-repeat center/cover;}
+.wea8{background:url(../../images/weatherico/8.png) no-repeat center/cover;}
+.wea9{background:url(../../images/weatherico/9.png) no-repeat center/cover;}
+.wea10{background:url(../../images/weatherico/10.png) no-repeat center/cover;}
+.wea11{background:url(../../images/weatherico/11.png) no-repeat center/cover;}

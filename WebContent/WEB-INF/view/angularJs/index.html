@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="app">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="../angularJs/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<h3>AngularJs</h3>
+		<hr>
+		<!-- 双向绑定 -->
+		<div ng-controller="oController">
+			<span>双向绑定</span>
+			<p ng-bind="parseExpr"></p>
+			<input ng-model="expr" type="text">
+		</div>
+		<hr>
+
+		<!-- controller -->
+		<div ng-controller="firController">
+			<p>
+				现在时间: <span ng-bind="clock.now | date:'medium'"></span>
+			</p>
+		</div>
+		<hr>
+
+		<!-- 事件 -->
+		<div ng-controller="secController">
+			<span>加减运算</span>
+			<button ng-click="add(1)">Add</button>
+			<a ng-click="subtract(1)">subtract</a>
+			<h4>
+				current count:<span ng-bind="counter"></span>
+			</h4>
+		</div>
+		<hr>
+
+		<!-- 自定义表达式解析，服务 -->
+		<div ng-controller="thiController">
+			<span>表达式解析</span><br> <input ng-model="to" type="email">
+			<textarea ng-model="emailBody"></textarea>
+			<pre>*parseVal*</pre>
+		</div>
+		<hr>
+
+		<!-- 过滤器 -->
+		<div ng-controller="forController">
+			<span>过滤器</span><br>
+			<p>*123 | currency*</p>
+			<p ng-bind="number.num1|currency"></p>
+			<p ng-bind="number.num2|date:'medium'"></p>
+			<input ng-model="number.num3" type="text" required>
+			<p ng-bind="number.num3|lowercase|firUppercase"></p>
+		</div>
+		<hr>
+
+		<!-- 表单验证 -->
+		<div ng-controller="fivController">
+			<form name="sign_up" novalidate ng-submit="submitForm()">
+				<div class="form-group">
+					<label for="name">Name</label> <input type="text"
+						class="form-control" id="name" name="name"
+						placeholder="Enter name" ng-model="signup.name" ng-minlength="3"
+						mg-maxlength="8" ensure-unique="name" required>
+					<div class="has-error"
+						ng-show="sign_up.name.$dirty && sign_up.name.$invalid && sign_up.submitted">
+						<small class="has-error" ng-show="sign_up.name.$error.required">
+							Your name is required. </small> <small class="has-error"
+							ng-show="sign_up.name.$error.minlength"> Your name is
+							required to be at least 3 characters. </small> <small class="has-error"
+							ng-show="sign_up.name.$error.maxlength"> Your name can't
+							be longer than 8 characters. </small> <small
+							ng-show="sign_up.name.$error.unique"> error name </small>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+		<hr>
+		<!-- 指令 -->
+		<div>
+			<input type="text" ng-model="theirUrl">
+			<div my-directive some-attr="theirUrl" my-link-text="baidu"></div>
+		</div>
+		<hr>
+		<!-- 内置指令 -->
+		<div>
+			<input type="text" ng-model="params"><br>
+			<button ng-disabled="!params">A button</button>
+			<br> <input type="text" ng-readOnly="!params"><br>
+			<button ng-disabled="timeShow">A button</button>
+		</div>
+		<hr>
+		<!-- 作用域 -->
+		<div ng-controller="sixController">
+			{{model.aValue}}<br>
+			<button ng-click="aFun()">aButton</button>
+			<br>
+			<div ng-controller="sixChildController">
+				{{model.aValue}}<br>
+				<button ng-click="bFun()">bButton</button>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="calendar_content">
+		<ul>
+			<li class="calendar_content_month">05</li>
+			<li class="calendar_content_month_1">月</li>
+			<li class="calendar_content_month_2">2015年活动</li>
+			<span class="calendar_content_month_bg"></span>
+		</ul>
+		<ul>
+			<li class="bt1"><span class="bt1_dd1"></span><a
+				style="color: #fff; text-decoration: none;"
+				href="http://www.baidu.com" target="_blank">2015杭州汽车票节</a>2015-04-01至2015-12-30</li>
+			<li class="bt1"><span class="bt1_ddundefined"></span><a
+				style="color: #fff; text-decoration: none;"
+				href="http://www.changtu.com" target="_blank">2015厦门周五活动</a>2015-04-01至2015-05-21</li>
+			<li class="bt1"><span class="bt1_dd2"></span><a
+				style="color: #fff; text-decoration: none;"
+				href="http://www.changtu.com" target="_blank">南京专场活动</a>2015-04-01至2015-05-15</li>
+			<li class="bt1"><span class="bt1_dd3"></span><a
+				style="color: #fff; text-decoration: none;"
+				href="http://www.changtu.com" target="_blank">京津冀专场活动</a>2015-04-16至2015-05-20</li>
+		</ul>
+	</div>
+	<div class="riq">
+		<table width="287" height="206" border="0" class="month_hd"
+			align="center">
+			<tr class="month_hd1">
+				<td align="center" valign="middle">一</td>
+				<td align="center" valign="middle">二</td>
+				<td align="center" valign="middle">三</td>
+				<td align="center" valign="middle">四</td>
+				<td align="center" valign="middle">五</td>
+				<td align="center" valign="middle">六</td>
+				<td align="center" valign="middle">日</td>
+			</tr>
+			<tr>
+				<td class="bg">&nbsp;</td>
+				<td class="bg">&nbsp;</td>
+				<td class="bg">&nbsp;</td>
+				<td class="bg">&nbsp;</td>
+				<td class="bg calClickable hd_14">1<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">2<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">3<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+			</tr>
+			<tr>
+				<td class="bg calClickable hd_14">4<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">5<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">6<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">7<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">8<input id="showTodayActions"
+					type="hidden" value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">9<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">10<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+			</tr>
+			<tr>
+				<td class="bg calClickable hd_14">11<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">12<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">13<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">14<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_14">15<input type="hidden"
+					value=".bt1_dd1,.bt1_dd2,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_6">16<input type="hidden"
+					value=".bt1_dd1,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_6">17<input type="hidden"
+					value=".bt1_dd1,.bt1_dd3" /></td>
+			</tr>
+			<tr>
+				<td class="bg calClickable hd_6">18<input type="hidden"
+					value=".bt1_dd1,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_6">19<input type="hidden"
+					value=".bt1_dd1,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_6">20<input type="hidden"
+					value=".bt1_dd1,.bt1_dd3" /></td>
+				<td class="bg calClickable hd_1">21<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">22<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">23<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">24<input type="hidden"
+					value=".bt1_dd1" /></td>
+			</tr>
+			<tr>
+				<td class="bg calClickable hd_1">25<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">26<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">27<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">28<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">29<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">30<input type="hidden"
+					value=".bt1_dd1" /></td>
+				<td class="bg calClickable hd_1">31<input type="hidden"
+					value=".bt1_dd1" /></td>
+			</tr>
+		</table>
+	</div>
+
+
+
+
+
+
+	<script src="../angularJs/js/angular.js"></script>
+	<script src="../angularJs/js/app.js"></script>
+</body>
+</html>

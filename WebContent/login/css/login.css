@@ -1,0 +1,33 @@
+@charset "utf-8";
+.wrapper { width:980px; padding:0 18px; margin:0 auto; height:792px; background:#c9c9cb url(../../images/bg.png) no-repeat 50% 0;}
+.wrapper .inner { width:940px; margin:0 auto;}
+#content { position:relative; width:940px;height:550px;margin:0 20px 0 20px;background:url(../../images/contentbg.png) repeat-x 0 0;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius:10px;}
+.main {width:910px; height:300px; padding:70px 15px 0 15px;}
+.slideimg {width:550px;height:300px;margin:0 110px 0 0; background:url(../../images/loginbg.png) repeat 0 0;z-index:1;
+		-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;overflow:hidden;box-shadow:0 0 20px 4px #064676;}
+.loginbox {width:350px; height:400px; position:absolute;top:40px; right:30px;background-color:#fff;overflow:hidden;z-index:10;
+		-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;box-shadow:10px 10px 20px 4px #064676;}
+.loginbox .loginboxs {width:300px;height:350px;margin:25px;}	
+.loginbox .loginboxs .logintab {width:300px; height:32px;border-bottom:3px solid #75c7ed;}
+.loginbox .loginboxs .logintab li p {color:#54B7E7;float:left;width:120px;height:32px; margin:0 5px 0 0;text-align:center;line-height:35px;background-color:#F3F3F3;}
+.loginbox .loginboxs .logintab li .currtab {background:url(../../images/tabHover.png) no-repeat 0 0;height:40px;color:#fff;font-weight:bold;}
+.loginbox .loginboxs .loginbody {position:absolute;width:300px;height:295px;margin:15px 0 5px 0;background:url(../../images/loginbg.png) repeat 0 0;}	
+.loginbody .closebtn {width:23px;height:23px;position:absolute;right:5px;top:5px;background:url(../../images/error_close.gif) no-repeat 0 0;cursor:pointer;}
+.loginbody .username {position:absolute;width:300px; height: 30px;top:40px;float:left;}		
+.loginbody .passwd {position:absolute;width:300px; height: 30px;top:95px;float:left;}
+.loginbody .verification {position:absolute;width:300px; height: 30px;top:150px;float:left;}
+.loginbody label {position:absolute;width:75px;cursor:pointer;margin:0 10px 0 20px;height:30px;line-height:30px;text-align:center;font-size:14px;color:#055C9B;background-color:#fff;}
+.loginbody em {position:absolute;left:105px;width:5px;height:30px;line-height:30px;font-style:normal;}
+.loginbody input {position:absolute;left:111px;margin-left:10px;padding-left:5px;height:30px;line-height:30px;width:140px;}
+.loginbody img {position:absolute;width:65px;height:30px;background-color:#fff;left:202px;}
+.loginbody span {float:right;margin-right:35px;;}
+.loginbody ul {margin:40px 0 0 50px;font-size:16px;}
+.loginbody .submitbtn {position:absolute;width:200px;height:40px;top:190px;left:50px;}
+.loginbody .submitbtn button {width:200px;height:40px;line-height:40px;background-color:#3879D9;color:#fff;font-size:20px;border:0;cursor:pointer;}
+.loginbody .submitbtn .logining {background-color:#A9A9A9;}
+
+.loginTips {width:500px;height:140px;margin-left:30px;padding-left:20px;top:30px;position:relative;background-color:#1176AE;}
+.loginTips div {position:absolute;margin-top:-10px;line-height:30px;text-align:center;font-size:16px;width:80px;height:30px;color:#095D9C;background-color:#C6DBE6;}
+.loginTips ul {float:left;position:relative;margin-top:30px;margin-right:15px;}
+
+	

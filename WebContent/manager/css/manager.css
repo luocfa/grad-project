@@ -1,0 +1,14 @@
+@charset "utf-8";
+.wrapper { width:980px; padding:0 18px; margin:0 auto; height:792px; background:#c9c9cb url(../../images/bg.png) no-repeat 50% 0;}
+.wrapper .inner { width:940px; margin:0 auto;}
+#content { position:relative; width:940px;height:550px;margin:0 20px 0 20px;background:url(../../images/contentbg.png) repeat-x 0 0;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius:10px;}
+
+.headerTip {width:940px;height:50px;position:absolute;top:0;}
+.menu {width:190px;height:530px;position:absolute;margin:15px 10px 5px 10px;background-color:#177FB6;}
+.menu .modelTab {width:165px;position:relative;float:left;margin:20px 10px 0 10px;padding-bottom:20px;background-color:#1176AE;}
+.menu .modelTab .title {width:80px;margin-left:10px;margin-top:-10px;line-height:30px;text-align:center;float:left;font-size:16px;color:#095D9C;background-color:#C6DBE6;}
+.menu .modelTab ul {float:left;position:relative;width:135px;margin:10px 10px 0 20px;border-bottom:1px solid #C8DDE8;}
+.menu .modelTab ul li {height:30px;line-height:30px;border-top:1px solid #C8DDE8;cursor:pointer;text-align:center;}
+.menu .modelTab ul .hover {background-color:#003161;}
+.menu .modelTab ul .selected {background-color:#003161;color:#fc0;}
+iframe {position:absolute;right:0;width:725px;height:530px;margin:15px 5px 5px 0px;border:0;}

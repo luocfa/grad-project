@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+	<util:map id="interfaceConfig" map-class="java.util.HashMap">
+	
+		<!-- 中央气象台  5天预报 -->
+		<entry key="forecast_zyqxt" value="http://weather.51wnl.com/weatherinfo/GetMoreWeather?weatherType=0"></entry>
+		
+		<!-- 聚合数据天气接口   实时加预报  更新频率较高 -->
+		<entry key="juhe_forecast" value="http://v.juhe.cn/weather/index" ></entry>
+		
+		<!-- 百度的天气接口，返回当日实时天气 -->
+		<entry key="baidu_realTime" value="http://apistore.baidu.com/microservice/weather"></entry>
+		
+		<!--中国天气网申请的appid接口 -->
+		<entry key="safe_forecast" value="http://open.weather.com.cn/data/"></entry>
+		
+		<!-- 空气指数 PM25.in -->
+		<entry key="onlyAqi_PM25in" value="http://www.pm25.in/api/querys/only_aqi.json"></entry>
+		<entry key="aqiDetail_PM25in" value="http://www.pm25.in/api/querys/aqi_details.json"></entry>
+		<entry key="aqiByStation_PM25in" value="http://www.pm25.in/api/querys/aqis_by_station.json"></entry>
+		
+	</util:map>
+</beans>
