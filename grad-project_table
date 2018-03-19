@@ -1,0 +1,72 @@
+/*
+SQLyog Ultimate v11.24 (32 bit)
+MySQL - 5.5.37-log : Database - grad_pro
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`grad_pro` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `grad_pro`;
+
+/*Table structure for table `ecm_24info` */
+
+DROP TABLE IF EXISTS `ecm_24info`;
+
+CREATE TABLE `ecm_24info` (
+  `id` int(5) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `up_datetime` datetime NOT NULL COMMENT '更新时间',
+  `up_day` date NOT NULL,
+  `up_datestr` char(11) NOT NULL COMMENT '更新时间字符串，唯一索引，便于查询24小时内容',
+  `temp` varchar(3) NOT NULL DEFAULT 'n' COMMENT '温度',
+  `shidu` varchar(3) NOT NULL DEFAULT 'n' COMMENT '湿度',
+  `aqi` varchar(3) NOT NULL DEFAULT 'n' COMMENT 'aqi',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `date` (`up_datestr`),
+  KEY `up_day` (`up_day`)
+) ENGINE=InnoDB AUTO_INCREMENT=11064 DEFAULT CHARSET=utf8;
+
+/*Table structure for table `ecm_news` */
+
+DROP TABLE IF EXISTS `ecm_news`;
+
+CREATE TABLE `ecm_news` (
+  `newsid` int(5) unsigned zerofill NOT NULL AUTO_INCREMENT COMMENT '主键，新闻编号',
+  `title` varchar(200) DEFAULT NULL COMMENT '新闻标题',
+  `publishtime` datetime NOT NULL COMMENT '发布时间',
+  `imgurl` varchar(500) DEFAULT NULL COMMENT '新闻图片地址',
+  `imghref` varchar(500) DEFAULT NULL COMMENT '图片链接',
+  `imgdesc` varchar(200) DEFAULT NULL COMMENT '图片描述',
+  `typename` varchar(10) NOT NULL COMMENT '新闻类型',
+  `ableflag` char(1) NOT NULL DEFAULT 'Y' COMMENT '可用标记',
+  PRIMARY KEY (`newsid`),
+  KEY `publishtime` (`publishtime`),
+  KEY `typename` (`typename`)
+) ENGINE=InnoDB AUTO_INCREMENT=10032 DEFAULT CHARSET=utf8;
+
+/*Table structure for table `ecm_users` */
+
+DROP TABLE IF EXISTS `ecm_users`;
+
+CREATE TABLE `ecm_users` (
+  `userid` int(5) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `loginname` varchar(18) NOT NULL,
+  `loginpass` char(32) NOT NULL,
+  `nickname` varchar(20) NOT NULL,
+  `phone` char(11) NOT NULL,
+  `ableFlag` char(1) NOT NULL DEFAULT 'Y',
+  PRIMARY KEY (`userid`),
+  UNIQUE KEY `loginname` (`loginname`)
+) ENGINE=InnoDB AUTO_INCREMENT=10002 DEFAULT CHARSET=utf8;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
